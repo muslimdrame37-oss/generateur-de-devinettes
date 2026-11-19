@@ -18,3 +18,31 @@ const devinettes = [
     reponse: "L'âge.",
   },
 ];
+
+const zoneDevinette = document.querySelector("#zone-devinette");
+const zoneReponse = document.querySelector("#zone-reponse");
+const boutonNouvelleDevinette = document.querySelector(
+  "#btn-nouvelle-devinette",
+);
+const boutonVoirReponse = document.querySelector("#btn-voir-reponse");
+
+let devinetteEnCours = null;
+
+// afficherDevinette : rien -> rien (Affiche la devinette et masque sa réponse)
+const afficherDevinette = () => {
+  let index = Math.floor(Math.random() * devinettes.length);
+  while (devinetteEnCours === devinettes[index]) {
+    index = Math.floor(Math.random() * devinettes.length);
+  }
+  zoneDevinette.textContent = devinettes[index].question;
+  zoneReponse.textContent = "";
+  devinetteEnCours = devinettes[index];
+};
+
+// voirReponse : rien -> rien (montrer la réponse de la devinette)
+const voirReponse = function () {
+  zoneReponse.textContent = devinetteEnCours.reponse;
+};
+
+boutonNouvelleDevinette.addEventListener("click", afficherDevinette);
+boutonVoirReponse.addEventListener("click", voirReponse);
