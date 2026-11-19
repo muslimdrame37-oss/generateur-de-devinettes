@@ -6,7 +6,33 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Générateur de devinettes</title>
   </head>
-  <body>
+  <body class="min-h-screen bg-teal-950 flex items-center justify-center">
+    <main>
+      <div
+        class="max-w-md w-full text-white text-center bg-teal-600 p-8 rounded-lg shadow shadow-teal-400"
+      >
+        <h1 class="text-4xl font-extrabold mb-2">Jeu de devinettes</h1>
+        <p>Testons votre capacité à deviner.</p>
+        <div class="flex flex-col gap-4 items-center justify-center">
+          <p id="zone-devinette"></p>
+          <p id="zone-reponse"></p>
+        </div>
+        <div>
+          <button
+            id="btn-nouvelle-devinette"
+            class="font-bold bg-teal-950 p-2 rounded-lg hover:bg-teal-800 cursor-pointer"
+          >
+            Nouvelle devinette
+          </button>
+          <button
+            id="btn-voir-reponse"
+            class="font-bold bg-teal-950 p-2 rounded-lg hover:bg-teal-800 cursor-pointer"
+          >
+            Voir la réponse
+          </button>
+        </div>
+      </div>
+    </main>
     <script src="script.js"></script>
   </body>
 </html>
