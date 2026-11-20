@@ -39,9 +39,13 @@ const afficherDevinette = () => {
   devinetteEnCours = devinettes[index];
 };
 
-// voirReponse : rien -> rien (montrer la réponse de la devinette)
+// voirReponse : rien -> rien (montrer la réponse de la devinette en cours sinon message d'alerte)
 const voirReponse = function () {
-  zoneReponse.textContent = devinetteEnCours.reponse;
+  if (devinetteEnCours === null) {
+    zoneReponse.textContent = "Tire d’abord une devinette !";
+  } else {
+    zoneReponse.textContent = devinetteEnCours.reponse;
+  }
 };
 
 boutonNouvelleDevinette.addEventListener("click", afficherDevinette);
