@@ -39,7 +39,7 @@ const afficherDevinette = () => {
   devinetteEnCours = devinettes[index];
 };
 
-// voirReponse : rien -> rien (montrer la réponse de la devinette en cours sinon message d'alerte)
+// voirReponse : rien -> rien ( Affiche la réponse sinon affiche "Tire d’abord une devinette !")
 const voirReponse = () => {
   if (devinetteEnCours === null) {
     zoneReponse.textContent = "Tire d’abord une devinette !";
