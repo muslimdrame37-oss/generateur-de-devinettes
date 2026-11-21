@@ -6,27 +6,30 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Générateur de devinettes</title>
   </head>
-  <body class="min-h-screen bg-teal-950 flex items-center justify-center">
+  <body class="min-h-screen bg-teal-950 flex items-center justify-center px-4">
     <main>
       <div
         class="max-w-md w-full text-white text-center bg-teal-600 p-8 rounded-lg shadow shadow-teal-400"
       >
-        <h1 class="text-4xl font-extrabold mb-2">Jeu de devinettes</h1>
-        <p>Testons votre capacité à deviner.</p>
+        <h1 class="text-3xl md:text-4xl font-extrabold mb-2">
+          Jeu de devinettes
+        </h1>
+        <p class="font-bold">Testons votre capacité à deviner.</p>
+        <hr class="text-teal-900 my-2" />
         <div class="flex flex-col gap-4 items-center justify-center">
-          <p id="zone-devinette"></p>
-          <p id="zone-reponse"></p>
+          <p id="zone-devinette" class="italic"></p>
+          <p id="zone-reponse" class="my-2 font-extrabold"></p>
         </div>
-        <div>
+        <div class="flex items-center justify-center gap-2">
           <button
             id="btn-nouvelle-devinette"
-            class="font-bold bg-teal-950 p-2 rounded-lg hover:bg-teal-800 cursor-pointer"
+            class="font-bold text-sm bg-teal-950 p-2 rounded-lg hover:bg-teal-800 cursor-pointer md:text-lg"
           >
             Nouvelle devinette
           </button>
           <button
             id="btn-voir-reponse"
-            class="font-bold bg-teal-950 p-2 rounded-lg hover:bg-teal-800 cursor-pointer"
+            class="font-bold text-sm bg-teal-950 p-2 rounded-lg hover:bg-teal-800 cursor-pointer md:text-lg"
           >
             Voir la réponse
           </button>
